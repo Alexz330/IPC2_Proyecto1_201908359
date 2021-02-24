@@ -1,6 +1,8 @@
+  
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
-from lista import *
+from Matriz import *
+from ListaGeneral import *
 
 
 def lectura():
@@ -10,19 +12,11 @@ def lectura():
     
     root = tree.getroot()
     
-    matriz = listaCircular()
+    matriz = ListaGeneral()
+    datos = Matriz()
 
-    for elemento in root:
-        if elemento.attrib['nombre']== 'matriz_n_1':
-            for subelemento in elemento:
-                matriz.insertar(subelemento.text, "")
-        else: 
-            return False
+    for elementos in root:
+        matriz.Append()
+        
 
 
-    listaMatriz = listaCircular()
-    #Clases = etree.xpath('//clase')
-    for clase in root:
-        listaMatriz.insertar(matriz.attrib['nombre'], matriz.attrib['n'], matriz.atrib['m'])
-    print("@@@@@@@@@@@@@@@@@@@@@")
-    listaMatriz.imprimir()
