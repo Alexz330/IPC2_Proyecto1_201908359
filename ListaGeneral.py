@@ -1,4 +1,5 @@
 from NodoGeneral import *
+from Matriz import *
 
 class ListaGeneral:
 
@@ -19,8 +20,10 @@ class ListaGeneral:
   
     def Listar(self):
         temporal = self.first
-        while temporal:
-            print(f' {str(temporal.nombre)}  {str(temporal.n)}  {str(temporal.m)}  {str(temporal.matriz)}' )
+        while temporal is not None:
+            print(f'nombre: {str(temporal.nombre)} n: {str(temporal.n)}  m:{str(temporal.m)}  ' )
+            if temporal.matriz is not None:
+                print(f'{temporal.matriz.ListarS()}')
             temporal = temporal.next
             if temporal == self.first:
                 break 

@@ -1,12 +1,9 @@
 from lectura import lectura
 
-def PantallaInicial():
-    print("IPC2, Seccion #, 201908389")
-    input("Presiona cualquier boton para continuar: ")
-    MenuPrincipal()
 
-def MenuPrincipal():
-    print("--------------Bienvenido al menu, ingresa la opcion que desees--------------")
+
+def Menusito():
+    print("######MENU BIEN PERRON###########")
     print("1. Cargar archivo")
     print("2. Procesar archivo")
     print("3. Escribir archivo salida")
@@ -26,5 +23,5 @@ def MenuPrincipal():
         Opcion4()
     else:
         print("Opcion inexistente")
-        MenuPrincipal()
-PantallaInicial()
+        Menusito()
+Menusito()

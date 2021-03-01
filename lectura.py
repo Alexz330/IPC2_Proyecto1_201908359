@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 from Matriz import *
 from ListaGeneral import *
 
-
 def lectura():
 
     ruta = input("Escriba la ruta del archivo: ")
@@ -12,11 +11,19 @@ def lectura():
     
     root = tree.getroot()
     
-    matriz = ListaGeneral()
-    datos = Matriz()
+    listaCircular = ListaGeneral()
+    
 
-    for elementos in root:
-        matriz.Append()
+    for valores in root:
+        listaDatos= Matriz()
+        for datos in valores:
+            listaDatos.AppendS(datos.attrib['x'], datos.attrib['y'], datos.text)
+        listaCircular.Append(valores.attrib['nombre'], valores.attrib['n'], valores.attrib['m'], listaDatos)
+    listaCircular.Listar()
+
+
+    
+    
         
 
 

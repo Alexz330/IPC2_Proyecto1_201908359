@@ -19,7 +19,7 @@ class Matriz:
     def ListarS(self):
         temporal = self.first
         while temporal is not None:
-            print(f'{str(temporal.x)} {str(temporal.y)} {str(temporal.dato)}')
+            print(f'posicion x:{str(temporal.x)} posicion y:{str(temporal.y)} valor: {str(temporal.dato)}')
             temporal = temporal.next
         
     
