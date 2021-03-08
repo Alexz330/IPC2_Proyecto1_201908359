@@ -1,0 +1,16 @@
+digraph Figura {
+rankdir=UD
+Matriz[shape=circle color=red label="Matrices"]
+Matriz -> Nombre
+Nombre -> MatrizPrueba1[shape=circle color=red label=""]
+Fila[shape = doublecircle color=red label="n = 2"]
+Columna[shape = doublecircle color=red label="m = 3"]
+MatrizPrueba1-> Fila
+MatrizPrueba1-> Columna
+MatrizPrueba1->2
+MatrizPrueba1->3
+MatrizPrueba1->1
+MatrizPrueba1->9
+MatrizPrueba1->2
+MatrizPrueba1->2
+}

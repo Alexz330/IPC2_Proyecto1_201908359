@@ -1,0 +1,12 @@
+<matrices>
+   <matriz nombre="MatrizPrueba1_Reducida" n="2" m="1">
+       <dato x="1" y="1">7</dato>
+       <dato x="2" y="1">12</dato>
+   </matriz>
+   <matriz nombre="MatrizPrueba2_Reducida" n="2" m="2">
+       <dato x="1" y="1">0</dato>
+       <dato x="2" y="1">16</dato>
+       <dato x="1" y="2">3</dato>
+       <dato x="2" y="2">2</dato>
+   </matriz>
+</matrices>

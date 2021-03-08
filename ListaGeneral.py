@@ -1,5 +1,7 @@
 from NodoGeneral import *
-from Matriz import *
+from matriz import *
+from NodoMatriz import *
+
 
 class ListaGeneral:
 
@@ -27,4 +29,9 @@ class ListaGeneral:
             temporal = temporal.next
             if temporal == self.first:
                 break 
+    
+    
+
+   
         
+    
