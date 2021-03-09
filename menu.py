@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 from matriz import *
 from ListaGeneral import *
 from ReducirMatriz import *
-
+import sys
 
 def Menusito(ruta):
     print("######MENU BIEN PERRON###########")
@@ -14,7 +14,7 @@ def Menusito(ruta):
     print("4. Mostrar datos del estudiate")
     print("5. Generar gráfica")
     print("6. Salida")
-    opselect = input()
+    opselect = input('Ingrese una Opcion: ')
     if opselect == "1":
         print("Guardando datos...")
         print("")
@@ -24,9 +24,11 @@ def Menusito(ruta):
     elif opselect == "3":
         archivo(ruta)
     elif opselect == "4":
-        Opcion4()
+        yo()
     elif opselect == "5":
         graficar(ruta)
+    elif opselect == "6":
+        salir()
     else:
         print("Opcion inexistente")
         Menusito(ruta)
@@ -131,7 +133,7 @@ def graficar(ruta):
         numero_grafo+=1  
 
     g_elejido= input("selecciona la matriz a graficar: ")
-
+    contador = 0
     for grafos in root:    
         if g_elejido == grafos.attrib['nombre']:
             with open("Grafica.dot", mode='w') as f:
@@ -145,13 +147,35 @@ def graficar(ruta):
                 f.write(grafos.attrib['nombre']+"-> Fila\n")
                 f.write(grafos.attrib['nombre']+"-> Columna\n") 
                 for valores in grafos:
+                    contador +=1
+                    f.write('valor' +str(contador) + '[ label ="' + valores.text + '"];\n')
+                    for datos in grafos:
+
+                        f.write('valor'+str(contador)+"->"+ datos.text)
                     
-                    f.write(grafos.attrib['nombre']+"->"+valores.text+"\n")
+                
+
                    
 
                 f.write("}\n")
 
     Menusito(None)    
 
+def yo():
+    print('Alexis Marco Tulio López Cacoj\n')
+    print('Carnet: 201908359')
+    Menusito(None)
+
+
+
+
+
+
+def salir():
+    print("Ipc2, Seccion E, 201908389")
+    print("Si sale Ipc2 SIUUUUUUUU")
+    input("Presiona cualquier boton para salir: ")
+   
+    sys.exit()
 
 Menusito(None)

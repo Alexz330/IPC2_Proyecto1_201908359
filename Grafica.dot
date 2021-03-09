@@ -1,16 +1,51 @@
-digraph Figura {
-rankdir=UD
-Matriz[shape=circle color=red label="Matrices"]
-Matriz -> Nombre
-Nombre -> MatrizPrueba1[shape=circle color=red label=""]
-Fila[shape = doublecircle color=red label="n = 2"]
-Columna[shape = doublecircle color=red label="m = 3"]
-MatrizPrueba1-> Fila
-MatrizPrueba1-> Columna
-MatrizPrueba1->2
-MatrizPrueba1->3
-MatrizPrueba1->1
-MatrizPrueba1->9
-MatrizPrueba1->2
-MatrizPrueba1->2
+digraph dibujo{
+rankdir=UD;
+node [shape = ellipse, style=filled, fillcolor=white];
+inicio [shape = ellipse,label= "Matrices"]
+estadoEjemplo[ label ="Ejemplo"];
+estado5n[ label ="n=5", shape = doublecircle, color=blue];
+estado4[ label ="m=4", shape = doublecircle, color=blue];
+inicio ->estadoEjemplo;
+estadoEjemplo->estado5n;
+estadoEjemplo->estado4;
+valor1[ label ="2"];
+estadoEjemplo->valor1;
+valor1->valor5;
+valor2[ label ="3"];
+estadoEjemplo->valor2;
+valor2->valor6;
+valor3[ label ="0"];
+estadoEjemplo->valor3;
+valor3->valor7;
+valor4[ label ="4"];
+estadoEjemplo->valor4;
+valor4->valor8;
+valor5[ label ="0"];
+valor5->valor9;
+valor6[ label ="0"];
+valor6->valor10;
+valor7[ label ="6"];
+valor7->valor11;
+valor8[ label ="3"];
+valor8->valor12;
+valor9[ label ="3"];
+valor9->valor13;
+valor10[ label ="4"];
+valor10->valor14;
+valor11[ label ="0"];
+valor11->valor15;
+valor12[ label ="2"];
+valor12->valor16;
+valor13[ label ="1"];
+valor13->valor17;
+valor14[ label ="0"];
+valor14->valor18;
+valor15[ label ="1"];
+valor15->valor19;
+valor16[ label ="5"];
+valor16->valor20;
+valor17[ label ="0"];
+valor18[ label ="0"];
+valor19[ label ="3"];
+valor20[ label ="1"];
 }
